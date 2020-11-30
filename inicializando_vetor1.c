@@ -1,5 +1,5 @@
 /*
-    Funï¿½ï¿½o: inicializando um vetor
+    Função: inicializando um vetor
     Autor: Pedro Filho, 30/11/2020.
 */
 
@@ -10,14 +10,14 @@
 #include <time.h>
 #define SIZE 10 // define o tamanho para 10 elementos
 
-// protï¿½tipos
+// protótipos
 int add_valor( int vt[], int size );
 int mostrar_vetor( int vt[], int size );
 
-// funï¿½ï¿½o principal
+// função principal
 int main()
 {
-   // seleciona o idioma portuguï¿½s
+   // seleciona o idioma português
    setlocale( LC_ALL, "Portuguese" );
 
    // criando um vetor
@@ -25,9 +25,11 @@ int main()
 
    // gerador
    srand( time( NULL ) );
+   // chamar a função adicionar valores
+   add_valor( vetor, SIZE );
 
    printf( "Os valores do vetor:\n" );
-   // Chamar a funï¿½ï¿½o mostrar valores
+   // Chamar a função mostrar valores
    mostrar_vetor( vetor, SIZE );
 
    // pula linha
@@ -38,19 +40,19 @@ int main()
 
    return 0; // fim do programa
 
-} // fim da funï¿½ï¿½o main
+} // fim da função main
 
-// funï¿½ï¿½o adiciona valores
+// função adiciona valores
 int add_valor( int vt[], int size )
 {
    // loop para adicionar valores no vetor
    for( int i = 0; i < size; i++ ) {
-      // gerar nï¿½meros aleï¿½torios e adicionar ao vetor
+      // gerar números aleátorios e adicionar ao vetor
       vt[ i ] = 1 + rand() % 100;
    } // fim for adicionar
-} // funï¿½ï¿½o adicionar
+} // função adicionar
 
-// funï¿½ï¿½o mostrar vetor
+// função mostrar vetor
 int mostrar_vetor( int vt[], int size )
 {
    // loop for para mostrar os valores do vetor
@@ -58,4 +60,4 @@ int mostrar_vetor( int vt[], int size )
       // mostrar os valores do vetor
       printf( "%d ", vt[ i ] );
    } // fim loop for
-} // fim funï¿½ï¿½o mostrar valores
+} // fim função mostrar valores
