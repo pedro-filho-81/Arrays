@@ -26,6 +26,9 @@ int main()
    // criar um vetor
    int vetor[ SIZE ];
 
+   // mostrar
+   printf( "{ VETOR EM ORDEM DECRESCENTE }\n" );
+
    // chamar a função adicionar valores
    add_valor( vetor, SIZE);
 
