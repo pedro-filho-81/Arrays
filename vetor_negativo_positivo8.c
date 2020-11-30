@@ -71,7 +71,7 @@ void mostrar_vetor( int vt[], int size )
       // imprimir
       printf( "%d ", vt[ i ] );
 
-      // se vt maior que zero faça
+      // se vt maior que zero
       if( vt[ i ] > 0 ) {
          // somar valores positivos
          soma += vt[ i ];
