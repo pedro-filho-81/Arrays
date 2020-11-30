@@ -14,8 +14,8 @@
 #define SIZE 10 // DEFINE O TAMANHO DO VETOR
 
 // PROTÓTIPOS de função
-int add_valor( int vt[], int size ); // para adicionar valores ao vetor
-int mostrar_vetor( int vt[], int size ); // para mostrar os valores do vetor
+void add_valor( int vt[], int size ); // para adicionar valores ao vetor
+void mostrar_vetor( int vt[], int size ); // para mostrar os valores do vetor
 
 // função principal
 int main()
@@ -46,7 +46,7 @@ int main()
 } // fim da função main
 
 // função adicionar valores
-int add_valor( int vt[], int size )
+void add_valor( int vt[], int size )
 {
    // loop para adicionar valores
    for( int i = 0; i < size; i++ ) {
@@ -59,7 +59,7 @@ int add_valor( int vt[], int size )
 } // fim função
 
 // função mostrar_vetor
-int mostrar_vetor( int vt[], int size )
+void mostrar_vetor( int vt[], int size )
 {
    int soma = 0; // para somar os números positivos
    int nega = 0; // para contar os números negativos
