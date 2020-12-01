@@ -1,5 +1,7 @@
 /*
-   Arrays: 10) Faça um programa que preencha um vetor de tamanho 100 com os 100 primeiros números naturais que não são múltiplos de 7. Ao final, imprima esse vetor na tela.
+   Arrays: 10) Faça um programa que preencha um vetor de tamanho
+   100 com os 100 primeiros números naturais que não são múltiplos
+   de 7. Ao final, imprima esse vetor na tela.
    Backes, André. Linguagem C (p. 128). GEN LTC. Edição do Kindle.
    Autor: Pedro Filho, 01/12/2020.
 */
@@ -21,16 +23,13 @@ int main()
    // seleciona o idioma português
    setlocale( LC_ALL, "Portuguese" );
 
-   // gerador
-   srand( time( NULL ) );
-
    // criar um vetor e atribuir o valor zero
    int vetor[ SIZE ] = {0};
 
    // chamar a função adicionar valores ao vetor
    add_valor( vetor, SIZE);
 
-   printf( "Mostra os valores entre 1 e 100 não multuplos de 7." );
+   printf( "Mostra os valores entre 1 e 100 não multiplos de 7." );
    // chamar a função mostrar valores do vetor
    mostrar_vetor( vetor, SIZE );
 
@@ -47,20 +46,15 @@ int main()
 // função adicionar valores
 void add_valor( int vt[], int size )
 {
-   int compare = 0;
-
    // loop para adicionar valores
-   for( int i = 0; i < size; i++ ) {
-
-      // GERAR NÚMEROS ALEATÓTIOS
-      compare = 1 + rand() % 100;
-      // se compare não for multiplo de sete
-      if( compare % 7 != 0 ) {
-         vt[ i ] = compare;
+   for( int i = 1; i <= size; i++ ) {
+      // se i maior que zero e não for multiplo de sete
+      if( i > 0 && i % 7 != 0 ) {
+         // vetor recebe o valor de i
+         vt[ i ] = i;
       } // fim if compare
-
+      //vt[ i ] = i;
    } // fim for
-
 } // fim função
 
 // função mostrar_vetor
