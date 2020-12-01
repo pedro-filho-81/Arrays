@@ -11,6 +11,7 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <time.h>
+#include <conio.h>
 #define SIZE 10 // DEFINE O TAMANHO DO VETOR
 
 // PROTÓTIPOS de função
