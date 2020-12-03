@@ -18,12 +18,12 @@
 #include <locale.h>
 #include <time.h>
 #define SIZE 6 // DEFINE O TAMANHO DO VETOR
-#define FREQUENCIA 9 // DEFINE O TAMANHO DO VETOR FREQUÊNCIA
+#define FREQUENCIA 3 // DEFINE O TAMANHO DO VETOR FREQUÊNCIA
 
 // PROTÓTIPOS de função
 void add_valor( int vt[], int size ); // para adicionar valores ao vetor
 void mostrar_vetor( int vt[], int size ); // para mostrar os valores do vetor
-void pesquisar( int frq[], int tam_frq, int vt[], int size ); // para pesquisar a faixa salarial dos vendedores
+void pesquisar( int vt[], int size ); // para pesquisar a faixa salarial dos vendedores
 void mostrar_pesquisa(int vt[], int size ); // para mostrar o valor da pesquisa
 
 // função principal
@@ -34,7 +34,6 @@ int main()
 
    // criar um vetor
    int vetor[ SIZE ];
-   int frequencia[ FREQUENCIA ];
 
    // chamar a função adicionar valores
    add_valor( vetor, SIZE);
@@ -42,10 +41,9 @@ int main()
    // chamar a função mostrar valores
    mostrar_vetor( vetor, SIZE );
 
-   // chamar a função pesquisar
-   pesquisar( frequencia, FREQUENCIA, vetor, SIZE );
+   printf( "\n" );
 
-   mostrar_pesquisa(frequencia, FREQUENCIA );
+   pesquisar( vetor, SI ZE );
 
    // pula linha
    printf( "\n" );
@@ -96,18 +94,43 @@ void mostrar_vetor( int vt[], int size )
 } // fim função
 
 // função pesquisar
-void pesquisar( int frq[], int tam_frq, int vt[], int size )
+// para pesquisar a faixa salarial dos vendedores
+void pesquisar( int vt[], int size )
 {
-   // loop para verificar a frequencia
+   int conta1 = 0, conta2 = 0, conta3 = 0, conta4 = 0;
+   int conta5 = 0, conta6 = 0, conta7 = 0, conta8 = 0;
+   int conta9 = 0;
+   // loop para pesquisar vetor
    for( int i = 0; i < size; i++ ) {
-      // contar a frequência que determinado valor aparece
-      ++frq[ vt[ i ] ];
-   } // fim loop for
+      if( vt[ i ] >= 200 && vt[ i ] <= 299 )
+         ++conta1;
+      if( vt[ i ] >= 300 && vt[ i ] <= 399 )
+         ++conta2;
+      if( vt[ i ] >= 400 && vt[ i ] <= 499 )
+         ++conta3;
+      if( vt[ i ] >= 500 && vt[ i ] <= 599 )
+         ++conta4;
+      if( vt[ i ] >= 600 && vt[ i ] <= 699 )
+         ++conta5;
+      if( vt[ i ] >= 700 && vt[ i ] <= 799 )
+         ++conta6;
+      if( vt[ i ] >= 800 && vt[ i ] <= 899 )
+         ++conta7;
+      if( vt[ i ] >= 900 && vt[ i ] <= 999 )
+         ++conta8;
+      if( vt[ i ] >= 1000 )
+         ++conta9;
+   } // fim for
+   // imprime resultado
+   printf( "Valores entre 200 e 299 %d\n", conta1 );
+   printf( "Valores entre 300 e 399 %d\n", conta2 );
+   printf( "Valores entre 400 e 499 %d\n", conta3 );
+   printf( "Valores entre 500 e 599 %d\n", conta4 );
+   printf( "Valores entre 600 e 699 %d\n", conta5 );
+   printf( "Valores entre 700 e 799 %d\n", conta6 );
+   printf( "Valores entre 800 e 899 %d\n", conta7 );
+   printf( "Valores entre 900 e 999 %d\n", conta8 );
+   printf( "Maior ou igual a 1000 %d\n", conta9 );
 } // fim função
 
-void mostrar_pesquisa( int  vt[], int size )
-{
-   for(int i = 0; i < size; i++ ) {
-      printf( "%d -> %d\n", i, vt[ i ] );
-   }
-}
+void mostrar_pesquisa(int vt[], int size ); // para mostrar o valor da pesquisa
