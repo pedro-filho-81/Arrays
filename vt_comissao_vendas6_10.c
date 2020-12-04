@@ -9,7 +9,7 @@
     receberam salários dentro de cada um dos  seguintes intervalos (suponha que
     o salário de cada vendedor seja arredondado em um valor inteiro):
    Deitel, Paul; Deitel, Harvey. C  Como Programar (p. 200). Edição do Kindle.
-    Autor: Pedro Filho, /12/2020.
+    Autor: Pedro Filho, 03/12/2020.
 */
 
 // incluir bibliotecas
@@ -24,7 +24,6 @@
 void add_valor( int vt[], int size ); // para adicionar valores ao vetor
 void mostrar_vetor( int vt[], int size ); // para mostrar os valores do vetor
 void pesquisar( int vt[], int size ); // para pesquisar a faixa salarial dos vendedores
-void mostrar_pesquisa(int vt[], int size ); // para mostrar o valor da pesquisa
 
 // função principal
 int main()
@@ -41,9 +40,10 @@ int main()
    // chamar a função mostrar valores
    mostrar_vetor( vetor, SIZE );
 
+   // pular uma linha
    printf( "\n" );
 
-   pesquisar( vetor, SI ZE );
+   pesquisar( vetor, SIZE );
 
    // pula linha
    printf( "\n" );
@@ -132,5 +132,3 @@ void pesquisar( int vt[], int size )
    printf( "Valores entre 900 e 999 %d\n", conta8 );
    printf( "Maior ou igual a 1000 %d\n", conta9 );
 } // fim função
-
-void mostrar_pesquisa(int vt[], int size ); // para mostrar o valor da pesquisa
