@@ -57,10 +57,10 @@ void add_valor( int vt[], int size )
       psq = 1 + rand() % 100;
       // se psq diferente de zero
       if( psq != 0 ) {
-         // pesquisar o valor
+         // chamaar a função pesquisar e atribuir o valor retornado a resposta
          resp = pesquisar( psq, vt, size );
          printf( "%d ", resp );
-         // se a resposta da pesquisa for diferente do aleatório
+         // se a resposta da pesquisa for diferente do valor aleatório
          if( resp == -1 ) {
             // o vetor recebe esse valor
             vt[ i ] = psq;
@@ -89,7 +89,7 @@ int pesquisar( int chave, int vt[], int size )
 {
    // loop para pesquisar valores no vetor
    for( int i = 0; i < size; i++ ) {
-      // verificar se chave é igual do vetor
+      // verificar se chave é igual ao vetor
       if( vt[ i ] == chave ) {
          // imprimir o valor
          return chave;
