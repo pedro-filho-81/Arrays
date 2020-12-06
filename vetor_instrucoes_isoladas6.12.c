@@ -32,7 +32,7 @@ int main()
    srand( time( NULL ) );
 
    // criar um vetor
-   int vetor[ SIZE ];
+   int counts[ SIZE ] = {0};
 
    // chamar a função adicionar valores
    add_valor( vetor, SIZE);
@@ -94,12 +94,12 @@ int pesquisar( int chave, int vt[], int size )
    // loop para pesquisar valores no vetor
    for( int i = 0; i < size; i++ ) {
       // verificar se chave é igual ao vetor
-      if( vt[ i ] == chave ) {
-         // imprimir o valor
+      if( vt[ i ] == chave ) { // se verdade
+         // retornar o valor
          return chave;
       } // fim if
    } // fim for
-   return -1; // chave não encontrada
-   // imprima
-   //printf(" }\n" );
+   // se não
+   // retornar -1 valor não localizado
+   return -1;
 } // fim função
