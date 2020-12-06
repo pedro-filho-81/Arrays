@@ -1,7 +1,3 @@
-/*
-    Arrays:
-    Autor: Pedro Filho, /12/2020.
-*/
 /* Exercício 6.22 Total de vendas.Escreva um programa que leia
   todas as informações das vendas do mês passado e resuma
   o total de vendas por vendedor por produto. Todos os totais
